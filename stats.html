@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stats Card</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9f9f9;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* Card Styles */
+.stats-card {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.card-content {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.card-number {
+  font-size: 34px;
+  font-weight: 700;
+  color: #000;
+}
+
+.card-growth {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-growth .arrow {
+  color: #00a000; /* Bright green */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .stats-card {
+    width: 90%;
+    padding: 15px 20px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-number {
+    font-size: 28px;
+  }
+
+  .card-growth {
+    font-size: 14px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="stats-card">
+    <p class="card-title">Supported Programs</p>
+    <div class="card-content">
+      <span class="card-number">1537</span>
+      <span class="card-growth">
+        <span class="arrow">↑</span> +37
+      </span>
+    </div>
+  </div>
+
+</body>
+</html>
